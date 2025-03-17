@@ -1,0 +1,78 @@
+:root {
+  color-scheme: light only;
+}
+
+body {
+  margin: 0;
+  background: rgb(27, 121, 164);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+nav {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  flex-wrap: wrap;        
+  padding: 1vw;    
+  position: sticky;
+  top: 0;
+  z-index: 99; /*In case issue*/
+}
+
+footer,
+nav {
+  backdrop-filter: blur(8px);
+   background-color: #21a527;
+}
+
+.mitte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.teaser {
+  width: 40vh;
+  height: 40vh;
+  margin: 0 auto;
+}
+
+.shadow-image {
+   transform: perspective(500px) rotateX(10deg); 
+   filter: drop-shadow(5px 5px 5px rgba(128, 128, 128, 0.5));   
+}
+
+.teaser img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer ul,
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li,
+nav ul li {
+  padding: 16px;
+}
+
+section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px;
+  box-sizing: border-box;
+
+  /* Das ist dafür, dass die Überschrift nicht hinter dem verschwomennen Bereich ist */
+  padding-top: 48px;
+  transform: translateY(-48px);
+}
