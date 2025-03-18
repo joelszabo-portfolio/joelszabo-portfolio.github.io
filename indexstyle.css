@@ -137,6 +137,28 @@ pre, code {
   margin: 10px 0;
 }
 
+
+/* Tooltip styles */
+nav ul li[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #444;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+nav ul li.clicked {
+  transform: scale(1.1); /* Enlarge the element when clicked */
+  background-color: #00a8ff;
+}
+
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
