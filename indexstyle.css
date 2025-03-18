@@ -104,7 +104,6 @@ nav ul li a:hover {
 }
 
 li.disabled {
-  pointer-events: none; /* Disables all mouse events */
   opacity: 0.5; /* Makes the element look "disabled" */
   color: var(--primary-color); /* Optional: change the color of disabled elements */
   background-color: var(--nav-color); /* Optional: keep the background as default */
