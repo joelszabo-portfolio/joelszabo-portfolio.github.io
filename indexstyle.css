@@ -103,11 +103,11 @@ nav ul li a:hover {
   color: var(--hover-color);
 }
 
-li.disabled {
+/*li.disabled {
   opacity: 0.5; /* Makes the element look "disabled" */
   color: var(--primary-color); /* Optional: change the color of disabled elements */
   background-color: var(--nav-color); /* Optional: keep the background as default */
-}
+}*/
 
 section {
   max-width: 1200px;
