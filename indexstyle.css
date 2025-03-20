@@ -183,3 +183,116 @@ pre, code {  /*where is the code displayed?*/
     height: 80vw;
   }
 }
+
+/* Skills Section ------------------may change------------------------------------------*/
+.skills-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #e6e6e6;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skill-item {
+  width: 250px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skill-bar-container {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.skill-bar {
+  height: 20px;
+  border-radius: 10px;
+}
+
+.skill-item p {
+  margin: 10px 0;
+}
+
+/* Farben für Skills */
+.skill-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+.skill-bar-container {
+  position: relative;
+  height: 25px;
+}
+
+.skill-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.percentage {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Farbliche Anpassung der Balken */
+.skill-bar:nth-child(1) {
+  background-color: #4CAF50; /* Grün für HTML */
+}
+
+.skill-bar:nth-child(2) {
+  background-color: #2196F3; /* Blau für CSS */
+}
+
+.skill-bar:nth-child(3) {
+  background-color: #FF9800; /* Orange für JavaScript */
+}
+
+.skill-bar:nth-child(4) {
+  background-color: #FF5722; /* Dunkelrot für Python */
+}
+
+.skill-bar:nth-child(5) {
+  background-color: #9C27B0; /* Lila für React */
+}
+
+.skill-bar:nth-child(6) {
+  background-color: #607D8B; /* Blau-Grau für Node.js */
+}
+
+.skill-bar:nth-child(7) {
+  background-color: #673AB7; /* Violett für SQL */
+}
+
+.skill-bar:nth-child(8) {
+  background-color: #795548; /* Braun für Java */
+}
+
+.skill-bar:nth-child(9) {
+  background-color: #00BCD4; /* Cyan für Git */
+}
+
+.skill-bar:nth-child(10) {
+  background-color: #8BC34A; /* Hellgrün für Linux */
+}
+
+.skill-bar:nth-child(11) {
+  background-color: #009688; /* Teal für Docker */
+}
+
+.skill-bar:nth-child(12) {
+  background-color: #3F51B5; /* Indigo für Vue.js */
+}
