@@ -32,18 +32,20 @@
   
   <!-- The body section contains all visible content -->
   <body>
-    <script src="script.js"></script>
     <!-- Header section containing the logo/photo -->
     <header class="mitte">
     <figure><!-- Logo/Photo with link back to home page -->
        <a href="index.html" title="Startseite | Joel Szabo">
-          <img src="images/sign.png" alt="Mein Foto" width="300">
+          <img src="images/faviconsalternativ.png" alt="Mein Foto" width="300">
        </a>
       <figcaption>Joel Szabo</figcaption>
     </figure> 
     </header>
     <div class="teaser">
-    <img src="images/fotoich.png" alt="Mein Foto" class="shadow-image">
+      <img id="image-container" src="/images/fotoich.png" alt="Foto über mich" class="shadow-image">
+      <div id="text-container"></div>
+      <script src="script.js"></script>      
+
     </div>
     
     <nav>
