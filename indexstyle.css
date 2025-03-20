@@ -1,77 +1,185 @@
+/* Define CSS variables (custom properties) that can be used throughout the website */
 :root {
-  --hell: rgb(213, 228, 235);
-  --dunkel: rgb(21, 24, 65);
+  /* Set the color scheme to light mode */
+  color-scheme: light;
 }
 
+/* Style the entire webpage body */
 body {
-  margin: 0;
-  background: white;
+  /* Center the content horizontally and remove top/bottom margins */
+  margin: 0 auto;
+  /* Set the background color using our CSS variable */
+  background: #f8ecdc;
+  /* Set the text color using our CSS variable */
+  color: #000000;
+  /* Define a list of fonts to use, in order of preference ,are fonts in the file?*/
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* Set maximum width to prevent content from stretching too wide on large screens */
+  max-width: 1920px;
 }
 
+/* Style the header section at the top of the page */
 header {
+  /* Add space above and below the header content */
   padding-top: 24px;
   padding-bottom: 24px;
 }
 
+/* Style the navigation menu */
 nav {
+  /* Use flexbox for layout */
+  display: flex;
+  /* Center items horizontally */
+  justify-content: center; 
+  /* Center items vertically */
+  align-items: center;     
+  /* Allow items to wrap to next line if needed */
+  flex-wrap: wrap;        
+  /* Add padding that scales with viewport width */
+  padding: 1vw;    
+  /* Make the navigation stick to the top when scrolling */
   position: sticky;
+  /* Position it at the top of the viewport */
   top: 0;
-  font-weight: 500;
-
-  /* Das ist dafür, dass die Navigation jederzeit anklickbar ist */
+  /* Ensure it stays above other content */
   z-index: 99;
 }
 
+/* Style both footer and navigation */
 footer,
 nav {
+  /* Add a blur effect to the background */
   backdrop-filter: blur(8px);
+  /* Set the background color using our CSS variable */
+  background-color: var(--nav-color);
+  /* Add a subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.teaser {
-  width: 100%;
-  height: 300px;
-}
-
-@media screen and (min-width: 800px) {
-  .teaser {
-    height: 600px;
-  }
-}
-
-.teaser img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-footer ul,
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-footer ul li,
-nav ul li {
-  padding: 16px;
-}
-
+/* Style elements with the 'mitte' class (center alignment) */
 .mitte {
+  /* Use flexbox for layout */
   display: flex;
+  /* Center items horizontally */
   justify-content: center;
+  /* Center items vertically */
   align-items: center;
 }
 
+/* Style the teaser section (usually for featured content) */
+.teaser {
+  /* Set width relative to viewport height */
+  width: 40vh;
+  /* Set height relative to viewport height */
+  height: 40vh;
+  /* Center the element horizontally */
+  margin: 0 auto;
+}
+
+/* Style images with the shadow-image class */
+.shadow-image {
+   /* Add a 3D perspective effect */
+   transform: perspective(500px) rotateX(10deg); 
+   /* Add a subtle shadow effect */
+   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));   
+}
+
+/* Style images within the teaser section */
+.teaser img {
+  /* Make image fill the container width */
+  width: 100%;
+  /* Make image fill the container height */
+  height: 100%;
+  /* Ensure image covers the area without distortion */
+  object-fit: cover;
+}
+
+/* Style lists in footer and navigation */
+footer ul,
+nav ul {
+  /* Remove default margins */
+  margin: 0;
+  /* Remove default padding */
+  padding: 0;
+  /* Remove bullet points */
+  list-style: none;
+}
+
+/* Style list items in footer and navigation */
+footer ul li,
+nav ul li {
+  /* Add space around list items */
+  padding: 16px;
+}
+
+/* Style links in footer and navigation */
+footer ul li a,
+nav ul li a {
+  /* Set link color using our CSS variable */
+  color: #000000;
+  /* Remove underline from links */
+  text-decoration: none;
+  /* Add smooth color transition effect */
+  transition: color 0.3s ease;
+}
+
+/* Style links when user hovers over them */
+footer ul li a:hover,
+nav ul li a:hover {
+  /* Change color on hover using our CSS variable */
+  color: #000000;
+}
+
+/* Style main content sections */
 section {
+  /* Set maximum width for content */
   max-width: 1200px;
+  /* Center the section horizontally */
   margin-left: auto;
   margin-right: auto;
+  /* Add padding around content */
   padding: 24px;
+  /* Include padding in width calculation */
   box-sizing: border-box;
-
-  /* Das ist dafür, dass die Überschrift nicht hinter dem verschwomennen Bereich ist */
+  /* Add extra padding at top */
   padding-top: 48px;
+  /* Move section up to overlap with navigation */
   transform: translateY(-48px);
+}
+
+/* Style focus state for accessibility */
+a:focus {
+  /* Add outline when element is focused (for keyboard navigation) */
+  outline: 2px solid #000000;
+  /* Add space between outline and element */
+  outline-offset: 2px;
+}
+
+/* Style code blocks and inline code */
+pre, code {  /*where is the code displayed?*/
+  /* Light gray background for code blocks */
+  background-color: #000000;
+  /* Add padding around code */
+  padding: 1em;
+  /* Round the corners */
+  border-radius: 4px;
+  /* Use monospace font for code */
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  /* Set text color using our CSS variable */
+  color: #000000;
+}
+
+/* Style for mobile devices (screens smaller than 768px) */
+@media (max-width: 768px) {
+  /* Stack navigation items vertically on mobile */
+  nav {
+    flex-direction: column;
+  }
+  
+  /* Make teaser images larger on mobile */
+  .teaser {
+    width: 80vw;
+    height: 80vw;
+  }
 }

@@ -1,3 +1,1 @@
-<script>
-    alert("Wilkommen zu meinem Webseite");
-</script>
+alert("Wilkommen zu meinem Webseite");
