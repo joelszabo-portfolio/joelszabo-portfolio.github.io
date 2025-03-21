@@ -298,7 +298,7 @@ pre, code {  /*where is the code displayed?*/
 }
 
 #text-container {
-  font-size: 60px; /* Change to desired size */
+  font-size: 40px; /* Change to desired size */
   font-family: "Arial", sans-serif; /* Change to desired font */
   font-weight: bold; /* Optional: makes text bold */
   color: #333; /* Optional: sets text color */
