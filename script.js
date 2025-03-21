@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const textContainer = document.getElementById("text-container");
     
     // Position text container on the left 
-    textContainer.style.transform = "translate(-200px, 0px)";  // Moves it
+    textContainer.style.transform = "translate(-200px, -200px)";  // Moves it
 
     // Array containing the paths to the images we want to switch between
     const images = ["/images/fotoich.png", "/images/1.png"]; 
