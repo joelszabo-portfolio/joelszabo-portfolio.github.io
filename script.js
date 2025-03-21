@@ -1,10 +1,13 @@
+
+imageContainer.addEventListener("click", function() {
+
 document.addEventListener("DOMContentLoaded", function() {
     // Get references to the image and text elements from the HTML using their IDs
     const imageContainer = document.getElementById("image-container");
     const textContainer = document.getElementById("text-container");
     
     // Position text container on the left 
-    textContainer.style.transform = "translate(-150px, -200px)";  // Moves it
+    textContainer.style.transform = "translate(-250px, -250px)";  // Moves it
     
     // Array containing the paths to the images we want to switch between
     const images = ["/images/fotoich.png", "/images/1.png"]; 
@@ -77,9 +80,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Start the image switching process - runs every 150 milliseconds
     let imageInterval = setInterval(switchImages, 150);
-
-    // Add click event listener to the image container
-    imageContainer.addEventListener("click", function() {
-        switchImages();
-    });
+});
 });
