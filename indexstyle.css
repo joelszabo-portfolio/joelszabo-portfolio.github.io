@@ -296,3 +296,11 @@ pre, code {  /*where is the code displayed?*/
 .skill-bar:nth-child(12) {
   background-color: #3F51B5; /* Indigo für Vue.js */
 }
+
+#text-container {
+  font-size: 24px; /* Change to desired size */
+  font-family: "Arial", sans-serif; /* Change to desired font */
+  font-weight: bold; /* Optional: makes text bold */
+  color: #333; /* Optional: sets text color */
+}
+

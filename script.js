@@ -1,23 +1,23 @@
-// Wait for the webpage to fully load before running the script
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     // Get references to the image and text elements from the HTML using their IDs
     const imageContainer = document.getElementById("image-container");
     const textContainer = document.getElementById("text-container");
     
     // Position text container on the left 
-    textContainer.style.transform = "translate(-600px, -200px)";  // Moves it
-
-
+    textContainer.style.transform = "translate(-300px, -100px)";  // Moves it
+    
     // Array containing the paths to the images we want to switch between
     const images = ["/images/fotoich.png", "/images/1.png"]; 
-    // Keep track of which image we're currently showing (starts at 0)
-    let imageIndex = 0;
-    // Counter to track how many times we've switched images
-    let switchCount = 0;
-    // Flag to track animation state
-    let isAnimating = false;
+    
+    // Initialize state variables
+    let imageIndex = 0;    // Keep track of which image we're currently showing
+    let switchCount = 0;   // Counter to track how many times we've switched images
+    let isAnimating = false;   // Flag to track animation state
 
-    // Function that handles switching between images
+    /**
+     * Function that handles switching between images
+     * Controls the welcome text animation and image transitions
+     */
     function switchImages() {
         // Show welcome text and start image animation when first called
         if (switchCount === 0) {
@@ -52,7 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
         switchCount++;
     }
 
-    // Function that shows text one character at a time
+    /**
+     * Function that shows text one character at a time
+     * Creates a typewriter effect for the welcome message
+     * @param {string} text - The text to animate
+     */
     function animateText(text) {
         // Start with first character
         let i = 0;
@@ -73,4 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Start the image switching process - runs every 150 milliseconds
     let imageInterval = setInterval(switchImages, 150);
+
+    // Add click event listener to the image container
+    imageContainer.addEventListener("click", function() {
+        switchImages();
+    });
 });
