@@ -1,17 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const imageContainer = document.querySelector(".image-wrapper"); // Target the wrapper
+    const imageContainer = document.getElementById("image-container");
     const textContainer = document.getElementById("text-container");
-    const imgElement = imageContainer.querySelector("img"); // Get the <img> inside
 
-    textContainer.style.transform = "translateY(-1000px)"; // Elevate text
-    textContainer.style.transform = "translateY(-500px)"; // Elevate text
-
+    // Ensure correct positioning (place text to the left)
+    textContainer.style.position = "absolute";
+    textContainer.style.left = "-250px"; // Adjust this value as needed
+    textContainer.style.top = "50%";
+    textContainer.style.transform = "translateY(-50%)";
+    
     const images = ["/images/fotoich.png", "/images/1.png"];
     let imageIndex = 0;
     let switchCount = 0;
     let isAnimating = false;
-    let isTextDisplayed = false;
     let imageInterval;
+
+    // Ensure there's an <img> inside imageContainer
+    let imgElement = imageContainer.querySelector("img");
+    if (!imgElement) {
+        imgElement = document.createElement("img");
+        imageContainer.appendChild(imgElement);
+    }
 
     function switchImages() {
         if (switchCount === 0) {
@@ -21,16 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
             isAnimating = true;
         }
 
-        if (isTextDisplayed && isAnimating) {
+        if (textContainer.innerHTML === "Willkommen zu meinem Portfolio" && isAnimating) {
             setTimeout(() => {
                 imageContainer.style.transform = "translateX(0)";
                 setTimeout(() => {
-                    textContainer.textContent = "";
+                    textContainer.innerHTML = "";
                     clearInterval(imageInterval);
                     imgElement.src = "/images/fotoich.png";
+                    isAnimating = false; // Allow new click
                 }, 500);
             }, 1000);
-            isAnimating = false;
             return;
         }
 
@@ -41,24 +49,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function animateText(text) {
         let i = 0;
-        textContainer.textContent = "";
-        isTextDisplayed = false;
+        textContainer.innerHTML = "";
+        clearInterval(textContainer.dataset.interval); // Clear previous interval
+
         const interval = setInterval(() => {
             if (i < text.length) {
-                textContainer.textContent += text[i];
+                textContainer.innerHTML += text[i];
                 i++;
             } else {
                 clearInterval(interval);
-                isTextDisplayed = true;
             }
         }, 150);
+
+        textContainer.dataset.interval = interval; // Store interval ID
     }
 
     imageContainer.addEventListener("click", function () {
-        if (isAnimating) return;
+        if (isAnimating) return; // Prevent multiple triggers
+        clearInterval(imageInterval); // Stop any existing animation
+
         switchCount = 0;
-        isAnimating = true;
         imageIndex = 0;
+        isAnimating = false;
         imageInterval = setInterval(switchImages, 150);
     });
 });
