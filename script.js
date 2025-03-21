@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const textContainer = document.getElementById("text-container");
     const imgElement = imageContainer.querySelector("img"); // Get the <img> inside
 
-    textContainer.style.transform = "translateY(-50px)"; // Elevate text
+    textContainer.style.transform = "translateY(-500px)"; // Elevate text
+    textContainer.style.transform = "translateY(-100px)"; // Elevate text
 
     const images = ["/images/fotoich.png", "/images/1.png"];
     let imageIndex = 0;
