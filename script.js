@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     textContainer.style.position = "absolute";
     textContainer.style.left = "20px";
     textContainer.style.top = "50%";
-    textContainer.style.transform = "translateY(-50%)";
+    textContainer.style.transform = "translateY(+50%)";
 
     // Array containing the paths to the images we want to switch between
     const images = ["/images/fotoich.png", "/images/1.png"]; 
