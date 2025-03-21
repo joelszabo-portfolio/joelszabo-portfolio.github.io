@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const imageContainer = document.getElementById("image-container");
+    const imageContainer = document.querySelector(".image-wrapper"); // Target the wrapper
     const textContainer = document.getElementById("text-container");
-    
-    textContainer.style.transform = "translate(-400px)";
-    textContainer.style.top = "-50px"; // Moves it up
-    textContainer.style.marginTop = "-50px"; // Moves text up by 50px
+    const imgElement = imageContainer.querySelector("img"); // Get the <img> inside
 
+    textContainer.style.transform = "translateY(-50px)"; // Elevate text
 
     const images = ["/images/fotoich.png", "/images/1.png"];
     let imageIndex = 0;
@@ -13,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let isAnimating = false;
     let isTextDisplayed = false;
     let imageInterval;
-    let imgElement = imageContainer.querySelector("img"); // Ensure correct selection
 
     function switchImages() {
         if (switchCount === 0) {
@@ -57,11 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     imageContainer.addEventListener("click", function () {
-        if (isAnimating) return;  // Prevent multiple triggers
+        if (isAnimating) return;
         switchCount = 0;
         isAnimating = true;
         imageIndex = 0;
         imageInterval = setInterval(switchImages, 150);
     });
 });
-
