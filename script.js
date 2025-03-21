@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Position text container on the left
     textContainer.style.position = "absolute";
-    textContainer.style.left = "20px";
-    textContainer.style.top = "50%";
-    textContainer.style.transform = "translateY(+50%)";
+    textContainer.style.left = "2px";
+    textContainer.style.top = "5%";
+    textContainer.style.transform = "translateY(+20%)";
 
     // Array containing the paths to the images we want to switch between
     const images = ["/images/fotoich.png", "/images/1.png"]; 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function switchImages() {
         // Show welcome text and start image animation when first called
         if (switchCount === 0) {
-            animateText("Welcome to my website");
+            animateText("Willkommen zu meinem Portfolio");
             // Move image right
             imageContainer.style.transition = "transform 0.5s ease-in-out";
             imageContainer.style.transform = "translateX(50px)";
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         // After text is fully displayed and animation is done, move image back
-        if (textContainer.innerHTML === "Welcome to my website" && isAnimating) {
+        if (textContainer.innerHTML === "Willkommen zu meinem Portfolio" && isAnimating) {
             setTimeout(() => {
                 imageContainer.style.transform = "translateX(0)";
                 // Clear text after image moves back

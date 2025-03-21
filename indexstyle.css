@@ -39,8 +39,8 @@ nav {
   /* Add padding that scales with viewport width */
   padding: 1vw;    
   /* Make the navigation stick to the top when scrolling */
-  position: sticky;
-  /* Position it at the top of the viewport */
+  position: relative;
+  /* Allow nav to flow naturally with page content */
   top: 0;
   /* Ensure it stays above other content */
   z-index: 99;
