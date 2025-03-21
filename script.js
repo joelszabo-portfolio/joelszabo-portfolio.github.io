@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Ensure correct positioning (place text to the left)
     textContainer.style.position = "absolute";
-    textContainer.style.left = "-250px"; // Adjust this value as needed
+    textContainer.style.left = "-50px"; // Adjust this value as needed
     textContainer.style.top = "50%";
-    textContainer.style.transform = "translateY(-50%)";
+    textContainer.style.transform = "translateY(50%)";
     
     const images = ["/images/fotoich.png", "/images/1.png"];
     let imageIndex = 0;
