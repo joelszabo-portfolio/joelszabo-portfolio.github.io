@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     textContainer.style.transform = "translateY(-50%)";
 
     // Array containing the paths to the images we want to switch between
-    const images = ["/images/fotoich.png", "/images/1.png", "/images/fotoich.png"]; 
+    const images = ["/images/fotoich.png", "/images/1.png"]; 
     // Keep track of which image we're currently showing (starts at 0)
     let imageIndex = 0;
     // Counter to track how many times we've switched images
@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 setTimeout(() => {
                     textContainer.innerHTML = "";
                     clearInterval(imageInterval);
+                    // Set final image to fotoich.png
+                    imageContainer.src = "/images/fotoich.png";
                 }, 500);
             }, 1000);
             isAnimating = false;
