@@ -4,9 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageContainer = document.getElementById("image-container");
     const textContainer = document.getElementById("text-container");
     
-    // Position text container on the left
-    textContainer.style.left = "50%"; 
-    textContainer.style.transform = "translate(-50%, -50px)";  // Moves it up by 50px
+    // Position text container on the left 
+    textContainer.style.transform = "translate(100px, -1000px)";  // Moves it
 
 
     // Array containing the paths to the images we want to switch between
