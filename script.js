@@ -5,10 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const textContainer = document.getElementById("text-container");
     
     // Position text container on the left
-    textContainer.style.position = "absolute";
-    textContainer.style.left = "2px";
-    textContainer.style.top = "5%";
-    textContainer.style.transform = "translateY(+20%)";
+    textContainer.style.left = "50%";
+    textContainer.style.transform = "translate(-50%, 20%)"; // Adjust the translateX to center it properly
+
 
     // Array containing the paths to the images we want to switch between
     const images = ["/images/fotoich.png", "/images/1.png"]; 

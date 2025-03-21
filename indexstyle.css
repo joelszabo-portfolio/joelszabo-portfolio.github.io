@@ -27,7 +27,7 @@ header {
 }
 
 /* Style the navigation menu */
-nav {
+nav,img {
   /* Use flexbox for layout */
   display: flex;
   /* Center items horizontally */
