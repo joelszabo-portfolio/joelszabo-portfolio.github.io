@@ -188,7 +188,6 @@ pre, code {  /*where is the code displayed?*/
 .skills-section {
   text-align: center;
   padding: 10px;
-  background-color: #0b1679;
 }
 
 .skills-container {
@@ -245,56 +244,12 @@ pre, code {  /*where is the code displayed?*/
 
 .percentage {
   font-size: 0.9rem;
-  color: #555;
+  color: #000000;
 }
 
 /* Farbliche Anpassung der Balken */
 .skill-bar:nth-child(1) {
   background-color: #4CAF50; /* Grün für HTML */
-}
-
-.skill-bar:nth-child(2) {
-  background-color: #2196F3; /* Blau für CSS */
-}
-
-.skill-bar:nth-child(3) {
-  background-color: #FF9800; /* Orange für JavaScript */
-}
-
-.skill-bar:nth-child(4) {
-  background-color: #FF5722; /* Dunkelrot für Python */
-}
-
-.skill-bar:nth-child(5) {
-  background-color: #9C27B0; /* Lila für React */
-}
-
-.skill-bar:nth-child(6) {
-  background-color: #607D8B; /* Blau-Grau für Node.js */
-}
-
-.skill-bar:nth-child(7) {
-  background-color: #673AB7; /* Violett für SQL */
-}
-
-.skill-bar:nth-child(8) {
-  background-color: #795548; /* Braun für Java */
-}
-
-.skill-bar:nth-child(9) {
-  background-color: #00BCD4; /* Cyan für Git */
-}
-
-.skill-bar:nth-child(10) {
-  background-color: #8BC34A; /* Hellgrün für Linux */
-}
-
-.skill-bar:nth-child(11) {
-  background-color: #009688; /* Teal für Docker */
-}
-
-.skill-bar:nth-child(12) {
-  background-color: #3F51B5; /* Indigo für Vue.js */
 }
 
 #text-container {
@@ -304,3 +259,13 @@ pre, code {  /*where is the code displayed?*/
   color: #333; /* Optional: sets text color */
 }
 
+.image-container {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  gap: 20px; /* Optional: add space between images */
+}
+
+.image-container img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+}
