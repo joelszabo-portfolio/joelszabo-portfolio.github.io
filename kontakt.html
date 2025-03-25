@@ -48,7 +48,7 @@
         <section class="contact-section">
             <article class="contact-left">
                 <h2>Schreibe mir</h2>
-                <form class="contact-form" action="mailto:joelszabo18@gmail.com" method="post" enctype="text/plain">
+                <form class="contact-form" action="process_form.php" method="POST">
                     <fieldset class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -61,7 +61,9 @@
                         <label for="message">Nachricht</label>
                         <textarea id="message" name="message" required></textarea>
                     </fieldset>
-                    <button type="submit" class="submit-btn">Absenden</button>
+                    <!-- Add CSRF token for security
+                    <input type="hidden" name="csrf_token" value="<?php echo generateToken(); ?>">
+                    <button type="submit" class="submit-btn">Absenden</button>-->
                 </form>
             </article>
             <aside class="contact-right">

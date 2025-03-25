@@ -1,14 +1,9 @@
-<!-- This tells the browser this is an HTML5 document -->
 <!DOCTYPE html>
-<!-- Set the language to German for proper text rendering and accessibility -->
 <html lang="de">
-  <!-- The head section contains metadata and resource links -->
   <head>
-    <!-- Set character encoding to UTF-8 for proper text display -->
     <meta charset="UTF-8" />
-    <!-- Viewport meta tag for responsive design on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- Open Graph Meta-Tags,für social media sharing -->
+      <!-- Open Graph Meta-Tags,for social media sharing,optional but recommended -->
       <meta property="og:title" content="Portfolio von Joel Szabo">
       <meta property="og:description" content="Ich bin ein motivierter Lehrstellensuchender im Bereich IT und strebe eine Karriere als Applikationsentwickler an.">
       <meta property="og:image" content="box.png">
@@ -29,10 +24,7 @@
     <!-- Link to the main stylesheet that controls the website's appearance -->
     <link rel="stylesheet" type="text/css" href="/indexstyle.css">
   </head>
-  
-  <!-- The body section contains all visible content -->
   <body>
-    <!-- Header section containing "the photo" -->
     <section class="teaser">
       <figure class="image-wrapper">
         <img id="image-container" src="/images/fotoich.png" class="shadow-image">
@@ -59,9 +51,6 @@
       </ul>
       <ul class="mitte">
         <li>
-          <a href="kontakt.html">Kontakt</a>
-        </li>
-        <li>
           <a href="lebenslauf.html">Lebenslauf</a>
         </li>
         <li>
@@ -70,18 +59,16 @@
         <li>
           <a href="zertifikate.html">Zertifikate</a>
         </li>
+        <li>
+          <a href="#unten">Kontakt</a>
+        </li>
       </ul>
     </nav>
-
-    <!-- Main content area of the page -->
     <main>
-      <!-- Hero section with main heading -->
       <section class="content-section">
-        <h2>Ihre Kandidat für die Lehrstelle</h2>
+        <h2>Ihr Kandidat für die Lehrstelle</h2>
         <p>Ich bin hochmotiviert, eine Karriere in der Softwareentwicklung zu starten – hier erfahren Sie, warum ich Ihr <strong>idealer Lehrling</strong> bin.</p>
       </section>
-
-      <!-- About me section -->
       <section class="content-section">
         <h2>Über mich</h2>
         <p>Schon vor einiger Zeit habe ich mich erstmals mit Softwareentwicklung beschäftigt, indem ich mit Visual 
@@ -102,7 +89,7 @@
       </p>
       </section>
 
-      <!-- Contact section -->
+      <!-- Contact section,needs overwork cause mailto is not secure -->
       <section class="content-section">
         <h2>So kontaktieren Sie mich</h2>
         <p>Ich freue mich über Ihr Interesse an meiner Bewerbung! Sie können mich auf verschiedenen Wegen erreichen:</p>
@@ -116,14 +103,14 @@
       </section>
     </main>
 
-    <!-- Footer section with legal links -->
+    <!-- Usual Legality Stuff -->
     <footer>
       <ul class="mitte">
         <li><a href="impressum.html">Impressum</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
       </ul>
     </footer>
-    <!-- Load JavaScript at the end of body for better performance -->
-    <script src="script.js"></script>
+    <!-- JavaScript,needs rework-->
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>
