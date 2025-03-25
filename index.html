@@ -1,116 +1,248 @@
 <!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- Open Graph Meta-Tags,for social media sharing,optional but recommended -->
-      <meta property="og:title" content="Portfolio von Joel Szabo">
-      <meta property="og:description" content="Ich bin ein motivierter Lehrstellensuchender im Bereich IT und strebe eine Karriere als Applikationsentwickler an.">
-      <meta property="og:image" content="box.png">
-      <meta property="og:url" content="https://joelszabo-portfolio.github.io/">
-      <meta property="og:type" content="website">
-      <meta property="og:site_name" content="joelszabo-portfolio">
-      <meta property="og:color" content="#007bff">  
-    <!-- Meta description for SEO ,optional ,but recommended-->
-    <meta name="description" content="Joel Szabo, Ihr motivierter Kandidat für eine Lehrstelle in der Softwareentwicklung. Erfahren Sie mehr über meine Projekte, Fähigkeiten und Kontaktmöglichkeiten." />
-    <!-- Set the page title that appears in browser tab -->
-    <title>Startseite | Joel Szabo</title>
-    
-    <!-- Favicon links for different devices and sizes -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
-    <!-- Link to the main stylesheet that controls the website's appearance -->
-    <link rel="stylesheet" type="text/css" href="/indexstyle.css">
-  </head>
-  <body>
-    <section class="teaser">
-      <figure class="image-wrapper">
-        <img id="image-container" src="/images/fotoich.png" class="shadow-image">
-        <figcaption>Foto über mich</figcaption>
-      </figure>
-      <article class="text-wrapper">
-        <p id="text-container"></p>
-      </article>
-    </section>
-    <nav> 
-      <ul class="mitte">
-        <li>
-          <a href="lernuebungen.html">Lernübungen</a>
-        </li>
-        <li>
-          <a href="apps.html">Apps</a>
-        </li>
-        <li>
-          <a href="spiele.html">Spiele</a>
-        </li>
-        <li>
-          <a href="projekte.html">Projekte</a>
-        </li>
-      </ul>
-      <ul class="mitte">
-        <li>
-          <a href="lebenslauf.html">Lebenslauf</a>
-        </li>
-        <li>
-          <a href="faehigkeiten.html">Fähigkeiten</a>
-        </li>
-        <li>
-          <a href="zertifikate.html">Zertifikate</a>
-        </li>
-        <li>
-          <a href="#unten">Kontakt</a>
-        </li>
-      </ul>
-    </nav>
-    <main>
-      <section class="content-section">
-        <h2>Ihr Kandidat für die Lehrstelle</h2>
-        <p>Ich bin hochmotiviert, eine Karriere in der Softwareentwicklung zu starten – hier erfahren Sie, warum ich Ihr <strong>idealer Lehrling</strong> bin.</p>
-      </section>
-      <section class="content-section">
-        <h2>Über mich</h2>
-        <p>Schon vor einiger Zeit habe ich mich erstmals mit Softwareentwicklung beschäftigt, indem ich mit Visual 
-        Scripting-Apps erste Programme erstellt habe. Dies hat meine Begeisterung für Programmierung geweckt, und 
-        ich begann, mich intensiver mit verschiedenen Programmiersprachen und -tools auseinanderzusetzen. Besonders 
-        gefallen haben mir die Grundlagen von Python, Java sowie HTML und CSS, die ich mir selbst beigebracht habe. 
-        Auch JavaScript habe ich bereits angeschaut, allerdings gibt es hier noch viel zu lernen, was ich mit Ihrer 
-        Unterstützung gerne vertiefen würde. Zudem habe ich jetzt auch Erfahrungen mit PHP und MySQL gesammelt.
-      </p>
-      <p>Nun möchte ich den nächsten Schritt gehen und meine Fähigkeiten gezielt in einem professionellen Umfeld 
-          weiterentwickeln. Vor kurzem zog ich ins Burgenland, um hier beruflich wie privat neu durchzustarten.
-      </p>
-      <p>Ich möchte den Weg über eine Firmenausbildung gehen, da mir hierbei die Chance geboten wird, mich in 
-          einem professionellen Umfeld zu beweisen und praxisnahe Erfahrungen zu sammeln. Der direkte Kontakt 
-          zu einem Unternehmen ist für mich von großer Bedeutung, da ich so nicht nur theoretisches Wissen erwerbe, 
-          sondern mich auch in der realen Arbeitswelt bewähren kann. Eine Ausbildung zum Applikationsentwickler wäre 
-          für mich die ideale Möglichkeit, meine Fähigkeiten zu vertiefen.
-      </p>
-      </section>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='' xml:lang=''>
+<head>
+	<meta charset='utf-8' />
+	<meta name='viewport' content='width=device-width, user-scalable=no' />
+	<title>2D Platformer Tutorial</title>
+	<style type='text/css'>
 
-      <!-- Contact section,needs overwork cause mailto is not secure -->
-      <section class="content-section">
-        <h2>So kontaktieren Sie mich</h2>
-        <p>Ich freue mich über Ihr Interesse an meiner Bewerbung! Sie können mich auf verschiedenen Wegen erreichen:</p>
-        <p>
-          <a href="mailto:joszabo18@gmail.com">E-Mail: joszabo18@gmail.com</a><br>
-          <a href="tel:+43 677  900 44 33">Telefon: +43 677  900 44 33</a><br>
-          <a href="https://www.linkedin.com/in/joel-szabo-code">LinkedIn:https://www.linkedin.com/in/joel-szabo-code</a><br>
-        </p>
-        <p>Ich werde mich schnellstmöglich bei Ihnen melden. Alternativ können Sie auch das Kontaktformular auf der 
-        Kontaktseite nutzen.</p>
-      </section>
-    </main>
+		body {
+			touch-action: none;
+			margin: 0;
+			border: 0 none;
+			padding: 0;
+			text-align: center;
+			background-color: black;
+		}
 
-    <!-- Usual Legality Stuff -->
-    <footer>
-      <ul class="mitte">
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-      </ul>
-    </footer>
-    <!-- JavaScript,needs rework-->
-    <!-- <script src="script.js"></script> -->
-  </body>
+		#canvas {
+			display: block;
+			margin: 0;
+			color: white;
+		}
+
+		#canvas:focus {
+			outline: none;
+		}
+
+		.godot {
+			font-family: 'Noto Sans', 'Droid Sans', Arial, sans-serif;
+			color: #e0e0e0;
+			background-color: #3b3943;
+			background-image: linear-gradient(to bottom, #403e48, #35333c);
+			border: 1px solid #45434e;
+			box-shadow: 0 0 1px 1px #2f2d35;
+		}
+
+
+		/* Status display
+		 * ============== */
+
+		#status {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			/* don't consume click events - make children visible explicitly */
+			visibility: hidden;
+		}
+
+		#status-progress {
+			width: 366px;
+			height: 7px;
+			background-color: #38363A;
+			border: 1px solid #444246;
+			padding: 1px;
+			box-shadow: 0 0 2px 1px #1B1C22;
+			border-radius: 2px;
+			visibility: visible;
+		}
+
+		@media only screen and (orientation:portrait) {
+			#status-progress {
+				width: 61.8%;
+			}
+		}
+
+		#status-progress-inner {
+			height: 100%;
+			width: 0;
+			box-sizing: border-box;
+			transition: width 0.5s linear;
+			background-color: #202020;
+			border: 1px solid #222223;
+			box-shadow: 0 0 1px 1px #27282E;
+			border-radius: 3px;
+		}
+
+		#status-indeterminate {
+			height: 42px;
+			visibility: visible;
+			position: relative;
+		}
+
+		#status-indeterminate > div {
+			width: 4.5px;
+			height: 0;
+			border-style: solid;
+			border-width: 9px 3px 0 3px;
+			border-color: #2b2b2b transparent transparent transparent;
+			transform-origin: center 21px;
+			position: absolute;
+		}
+
+		#status-indeterminate > div:nth-child(1) { transform: rotate( 22.5deg); }
+		#status-indeterminate > div:nth-child(2) { transform: rotate( 67.5deg); }
+		#status-indeterminate > div:nth-child(3) { transform: rotate(112.5deg); }
+		#status-indeterminate > div:nth-child(4) { transform: rotate(157.5deg); }
+		#status-indeterminate > div:nth-child(5) { transform: rotate(202.5deg); }
+		#status-indeterminate > div:nth-child(6) { transform: rotate(247.5deg); }
+		#status-indeterminate > div:nth-child(7) { transform: rotate(292.5deg); }
+		#status-indeterminate > div:nth-child(8) { transform: rotate(337.5deg); }
+
+		#status-notice {
+			margin: 0 100px;
+			line-height: 1.3;
+			visibility: visible;
+			padding: 4px 6px;
+			visibility: visible;
+		}
+	</style>
+<link id='-gd-engine-icon' rel='icon' type='image/png' href='favicon.png' />
+<link rel='apple-touch-icon' href='apple-touch-icon.png'/>
+
+</head>
+<body>
+	<canvas id='canvas'>
+		HTML5 canvas appears to be unsupported in the current browser.<br />
+		Please try updating or use a different browser.
+	</canvas>
+	<div id='status'>
+		<div id='status-progress' style='display: none;' oncontextmenu='event.preventDefault();'><div id ='status-progress-inner'></div></div>
+		<div id='status-indeterminate' style='display: none;' oncontextmenu='event.preventDefault();'>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div id='status-notice' class='godot' style='display: none;'></div>
+	</div>
+
+	<script type='text/javascript' src='game.js'></script>
+	<script type='text/javascript'>//<![CDATA[
+
+		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"game","experimentalVK":false,"fileSizes":{"game.pck":3113744,"game.wasm":26067241},"focusCanvas":true,"gdnativeLibs":[],"audioWorklet":"audio.worklet.js"};
+		var engine = new Engine(GODOT_CONFIG);
+
+		(function() {
+			const INDETERMINATE_STATUS_STEP_MS = 100;
+			var statusProgress = document.getElementById('status-progress');
+			var statusProgressInner = document.getElementById('status-progress-inner');
+			var statusIndeterminate = document.getElementById('status-indeterminate');
+			var statusNotice = document.getElementById('status-notice');
+
+			var initializing = true;
+			var statusMode = 'hidden';
+
+			var animationCallbacks = [];
+			function animate(time) {
+				animationCallbacks.forEach(callback => callback(time));
+				requestAnimationFrame(animate);
+			}
+			requestAnimationFrame(animate);
+
+			function setStatusMode(mode) {
+
+				if (statusMode === mode || !initializing)
+					return;
+				[statusProgress, statusIndeterminate, statusNotice].forEach(elem => {
+					elem.style.display = 'none';
+				});
+				animationCallbacks = animationCallbacks.filter(function(value) {
+					return (value != animateStatusIndeterminate);
+				});
+				switch (mode) {
+					case 'progress':
+						statusProgress.style.display = 'block';
+						break;
+					case 'indeterminate':
+						statusIndeterminate.style.display = 'block';
+						animationCallbacks.push(animateStatusIndeterminate);
+						break;
+					case 'notice':
+						statusNotice.style.display = 'block';
+						break;
+					case 'hidden':
+						break;
+					default:
+						throw new Error('Invalid status mode');
+				}
+				statusMode = mode;
+			}
+
+			function animateStatusIndeterminate(ms) {
+				var i = Math.floor(ms / INDETERMINATE_STATUS_STEP_MS % 8);
+				if (statusIndeterminate.children[i].style.borderTopColor == '') {
+					Array.prototype.slice.call(statusIndeterminate.children).forEach(child => {
+						child.style.borderTopColor = '';
+					});
+					statusIndeterminate.children[i].style.borderTopColor = '#dfdfdf';
+				}
+			}
+
+			function setStatusNotice(text) {
+				while (statusNotice.lastChild) {
+					statusNotice.removeChild(statusNotice.lastChild);
+				}
+				var lines = text.split('\n');
+				lines.forEach((line) => {
+					statusNotice.appendChild(document.createTextNode(line));
+					statusNotice.appendChild(document.createElement('br'));
+				});
+			};
+
+			function displayFailureNotice(err) {
+				var msg = err.message || err;
+				console.error(msg);
+				setStatusNotice(msg);
+				setStatusMode('notice');
+				initializing = false;
+			};
+
+			if (!Engine.isWebGLAvailable()) {
+				displayFailureNotice('WebGL not available');
+			} else {
+				setStatusMode('indeterminate');
+				engine.startGame({
+					'onProgress': function (current, total) {
+						if (total > 0) {
+							statusProgressInner.style.width = current/total * 100 + '%';
+							setStatusMode('progress');
+							if (current === total) {
+								// wait for progress bar animation
+								setTimeout(() => {
+									setStatusMode('indeterminate');
+								}, 500);
+							}
+						} else {
+							setStatusMode('indeterminate');
+						}
+					},
+				}).then(() => {
+					setStatusMode('hidden');
+					initializing = false;
+				}, displayFailureNotice);
+			}
+		})();
+	//]]></script>
+</body>
 </html>
+
