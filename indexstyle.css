@@ -41,7 +41,10 @@ nav, img {
   z-index: 99;
 }
 
-footer, nav {
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   backdrop-filter: blur(8px);
   background-color: var(--nav-color);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -88,7 +91,7 @@ nav ul li a {
 section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 48px 24px;
   box-sizing: border-box;
 }
 
@@ -267,4 +270,8 @@ h2 {
     width: 80vw;
     height: 80vw;
   }
+}
+
+main {
+  margin-bottom: 100px; /* Add space for fixed footer */
 }
