@@ -217,3 +217,16 @@ img {
   cursor: pointer;
   border-radius: 3px;
 }
+
+.wrapper2 {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.bannerimg {
+  width: 900px;
+  height: 80%;
+}
