@@ -227,7 +227,6 @@ img {
 }
 
 .bannerimg {
-  aspect-ratio: 9/16;
-  max-width: 100%;
-  height: 1dvh;
+  width: 1200px;
+  height: 50px;
 }
