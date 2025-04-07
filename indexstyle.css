@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
 
 body {
@@ -88,9 +88,8 @@ nav ul li a {
 section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 24px 24px;
+  padding: 24px;
   box-sizing: border-box;
-  transform: translateY(-48px);
 }
 
 a:focus {
@@ -159,6 +158,7 @@ pre, code {
 /* Text Container */
 #text-container {
   font-size: 40px;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   color: #333;
 }
