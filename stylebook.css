@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #e5d1b8;
+  font-family: 'Georgia', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.book-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.book {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 595 / 842; /* A4 ratio */
+  max-width: 595px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  perspective: 1500px;
+}
+
+/* Cover & Page Grundlayout */
+.cover,
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  transform-style: preserve-3d;
+  transition: transform 1s, opacity 0.6s ease-out;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* Vorderes Cover */
+.cover.front {
+  z-index: 5;
+  background: #5b3c1c;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform-origin: left;
+}
+
+.cover.front .cover-content {
+  text-align: center;
+}
+
+.cover.front h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.cover.front p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #eee;
+}
+
+.cover.front.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: rotateY(-180deg);
+}
+
+/* Seiten */
+.page {
+  background: white;
+  transform-origin: left;
+}
+
+.page-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.page.flipped {
+  transform: rotateY(-180deg);
+}
+
+#page1 {
+  z-index: 3;
+}
+
+#page2 {
+  z-index: 2;
+}
+
+/* Hinteres Cover */
+.cover.back {
+  z-index: 1;
+  background: #5b3c1c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover.back .cover-content {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px;
+  font-style: italic;
+}
+
+/* Navigation Buttons */
+.controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  display: none;
+}
+
+.controls.active {
+  display: block;
+  visibility: visible;
+}
+
+.controls button {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: transparent;
+  font-size: 4rem;
+  font-weight: bold;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.controls button:hover {
+  color: yellow;
+}
+
+.controls button:first-child {
+  left: 0;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.controls button:last-child {
+  right: 0;
+  text-align: right;
+  padding-right: 20px;
+}
+
+/* Mobiloptimierung */
+@media (max-width: 650px) {
+  .book {
+    width: 90%;
+  }
+
+  .controls button {
+    font-size: 3rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
