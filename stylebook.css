@@ -123,8 +123,8 @@ body {
 .controls {
   position: absolute;
   top: 50%;
-  left: -60px;
-  right: -60px;
+  left: 0;
+  right: 0;
   height: auto;
   pointer-events: none;
   z-index: 10;
@@ -155,6 +155,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 20px;
 }
 
 .controls button:hover {
