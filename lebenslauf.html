@@ -49,45 +49,45 @@
             <p>Hier findest du meinen Lebenslauf und meine berufliche Entwicklung.</p>
         </section>
     </main>
-    <body>
-        <div class="book-wrapper">
-          <div class="book" id="book">
+    <div class="book-wrapper">
+        <div class="book" id="book">
             <!-- Front Cover -->
             <div class="cover front" id="frontCover" onclick="openBook()">
-              <div class="cover-content">
-                <h1>Lebenslauf</h1>
-                <p>Klicke, um das Buch zu öffnen</p>
-              </div>
+                <div class="cover-content">
+                    <h1>Lebenslauf</h1>
+                    <p>Klicke, um das Buch zu öffnen</p>
+                </div>
             </div>
       
             <!-- Page 1 -->
             <div class="page" id="page1">
-              <div class="page-content">
-                <img src="images/0001.jpg" alt="Seite 1" />
-              </div>
+                <div class="page-content">
+                    <img src="images/0001.jpg" alt="Seite 1" />
+                </div>
             </div>
       
             <!-- Page 2 -->
             <div class="page" id="page2">
-              <div class="page-content">
-                <img src="images/0002.jpg" alt="Seite 2" />
-              </div>
+                <div class="page-content">
+                    <img src="images/0002.jpg" alt="Seite 2" />
+                </div>
             </div>
       
             <!-- Back Cover -->
             <div class="cover back">
-              <div class="cover-content">
-                <p>Vielen Dank für Ihre Aufmerksamkeit.<br />Ich freue mich auf Ihre Rückmeldung.</p>
-              </div>
+                <div class="cover-content">
+                    <p>Vielen Dank für Ihre Aufmerksamkeit.<br />Ich freue mich auf Ihre Rückmeldung.</p>
+                </div>
             </div>
-          </div>
-      
-      <div class="controls active">
+        </div>
+    </div>
+
+    <div class="controls active">
         <button class="prev-page" onclick="prevPage()">&lt;</button>
         <div class="deadzone"></div>
         <button class="next-page" onclick="nextPage()">&gt;</button>
-      </div>
-      <script src="scriptbook.js"></script>
+    </div>
+    <script src="scriptbook.js"></script>
     <a href="lebenslauf.pdf" download="Lebenslauf.pdf" class="download-btn">📄 Lebenslauf herunterladen</a>
     <footer>
         <ul class="mitte">
